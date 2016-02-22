@@ -122,3 +122,14 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
 
 LOGIN_URL = '/login/'
+
+
+
+# 修改上传时文件在内存中可以存放的最大size为10m
+FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760
+
+# sae的本地文件系统是只读的，修改django的file storage backend为Storage
+DEFAULT_FILE_STORAGE = 'sae.ext.django.storage.backend.Storage'
+# 使用media这个bucket
+STORAGE_BUCKET_NAME = 'media'
+# ref: https://docs.djangoproject.com/en/dev/topics/files/
