@@ -1,3 +1,3 @@
 import sae
-from  LM import wsgi
+from  LM import urls
 application = sae.create_wsgi_app(wsgi.application)
