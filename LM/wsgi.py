@@ -1,3 +1,4 @@
+
 """
 WSGI config for LM project.
 
@@ -14,6 +15,7 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "LM.settings")
 application = get_wsgi_application()
 """
+
 import os
 import sys
 

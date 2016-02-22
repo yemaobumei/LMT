@@ -73,6 +73,16 @@ WSGI_APPLICATION = 'LM.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
+# 线上数据库的配置
+MYSQL_HOST = 'w.rdc.sae.sina.com.cn'
+#MYSQL_PORT = '3307'
+#MYSQL_USER = 'ACCESSKEY'
+#MYSQL_PASS = 'SECRETKEY'
+#MYSQL_DB   = 'app_APP_NAME'
+
+from sae._restful_mysql import monkey
+monkey.patch()
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',#django.db.backends.sqlite3',
@@ -80,7 +90,7 @@ DATABASES = {
         'NAME':'LMTdb',
         'USER':'root',
         'PASSWORD':'6688565',
-        'HOST':'127.0.0.1',
+        'HOST':'MYSQL_HOST',
         'PORT':'3306',
     }
 }
