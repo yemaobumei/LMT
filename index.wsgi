@@ -1,5 +1,4 @@
 import sae
-from yeflm import wsgi
 def app(environ, start_response):
 	status = '200 OK'
 	response_headers = [('Content-type', 'text/plain')]
