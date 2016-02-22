@@ -80,8 +80,8 @@ MYSQL_HOST = 'w.rdc.sae.sina.com.cn'
 #MYSQL_PASS = 'SECRETKEY'
 #MYSQL_DB   = 'app_APP_NAME'
 
-from sae._restful_mysql import monkey
-monkey.patch()
+#from sae._restful_mysql import monkey
+#monkey.patch()
 
 DATABASES = {
     'default': {
