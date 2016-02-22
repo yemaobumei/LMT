@@ -1,3 +1,4 @@
+#encoding='uft-8'
 """
 Django settings for LM project.
 
