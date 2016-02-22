@@ -72,7 +72,7 @@ WSGI_APPLICATION = 'LM.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-
+"""
 # 线上数据库的配置
 MYSQL_HOST = 'w.rdc.sae.sina.com.cn'
 #MYSQL_PORT = '3307'
@@ -90,12 +90,26 @@ DATABASES = {
         'NAME':'LMTdb',
         'USER':'root',
         'PASSWORD':'6688565',
-        'HOST':'MYSQL_HOST',
+        'HOST':'127.0.0.1',
         'PORT':'3306',
     }
 }
+"""
 
+from sae.const import (MYSQL_HOST, MYSQL_HOST_S,
+    MYSQL_PORT, MYSQL_USER, MYSQL_PASS, MYSQL_DB
+)
 
+DATABASES = {
+    'default': {
+        'ENGINE':   'django.db.backends.mysql',
+        'NAME':     MYSQL_DB,
+        'USER':     MYSQL_USER, 
+        'PASSWORD': MYSQL_PASS,
+        'HOST':     MYSQL_HOST,
+        'PORT':     MYSQL_PORT,
+    }
+}
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
