@@ -1,2 +1,3 @@
-name:yeflm
-version:1
+libraries:
+- name:django
+  version:1.8.2
