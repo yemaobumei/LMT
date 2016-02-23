@@ -2,4 +2,8 @@ name: yefLM
 version: 3
 libraries:
 - name: "django"
-  version: "1.5"
+  version: "1.8.2"
+
+handlers:
+- url: /static/
+  static_path: static

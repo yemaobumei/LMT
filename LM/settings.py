@@ -155,7 +155,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
 
 LOGIN_URL = '/login/'
 
-
+"""
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+"""
