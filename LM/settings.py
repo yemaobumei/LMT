@@ -106,7 +106,7 @@ DATABASES = {
 """
 from os import environ
 debug2= not environ.get('yefLM','')
-#debug2=False
+debug2=False
 if debug2:
     #local
     MYSQL_DB='LMTdb'
