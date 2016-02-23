@@ -73,6 +73,15 @@ WSGI_APPLICATION = 'LM.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 """
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+"""
+
+"""
 # 线上数据库的配置
 MYSQL_HOST = 'w.rdc.sae.sina.com.cn'
 #MYSQL_PORT = '3307'
