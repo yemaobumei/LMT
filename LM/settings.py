@@ -104,10 +104,19 @@ DATABASES = {
     }
 }
 """
-
-from sae.const import (MYSQL_HOST, MYSQL_HOST_S,
+from os import environ
+debug= not environ.get('yeflm','')
+if debug:
+    #local
+    MYSQL_DB='LMTdb'
+    MYSQL_USER='root'
+    MYSQL_PASS='6688565'
+    MYSQL_HOST='127.0.0.1'
+    MYSQL_PORT='3306'
+else:
+    from sae.const import (MYSQL_HOST, MYSQL_HOST_S,
     MYSQL_PORT, MYSQL_USER, MYSQL_PASS, MYSQL_DB
-)
+    )
 
 DATABASES = {
     'default': {
